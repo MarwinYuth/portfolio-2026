@@ -1,0 +1,16 @@
+services:
+  portfolio:
+    image: ghcr.io/marwinyuth/marwinyuth/portfolio-2026:dev
+    container_name: portfolio-3d
+    restart: unless-stopped
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
