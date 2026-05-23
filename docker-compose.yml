@@ -1,7 +1,7 @@
 services:
   portfolio:
     image: ghcr.io/marwinyuth/marwinyuth/portfolio-2026:dev
-    container_name: portfolio-3d
+    container_name: portfolio-2026
     restart: unless-stopped
     ports:
       - "3003:3003"
