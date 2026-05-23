@@ -4,7 +4,7 @@ services:
     container_name: portfolio-2026
     restart: unless-stopped
     ports:
-      - "3003:3003"
+      - "3000:3000"
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
